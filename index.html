@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="style.css">
+    <title>Portifólio</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+<header>
+    <div class="interface">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/LOGOCAUAN.png" alt="" width="130">
+            </a>
+        </div><!--logo-->
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+            </ul>
+        </nav>
+
+        <div class="btn-linkedin">
+            <a href="https://www.linkedin.com/in/cauanguerreiro/" target="_blank">
+                <button>
+                    <img src="img/linkedin.png" alt="LinkedIn" class="icon" /> Linkedin
+                </button>
+            </a>
+        </div>
+        <div class="btn-github">
+            <a href="https://github.com/Cauanmguerreiro" target="_blank">
+                <button>
+                    <img src="img/githubimg.png" alt="GitHub" class="icon" />GitHub
+                </button>
+            </a>
+        </div>
+        
+    </div><!--interface-->
+</header>
+
+<main>
+    <section class="topo-do-site">
+        <div class="interface">
+            <div class="flex">
+                <div class="txt-topo-site">
+                    <h1>CIÊNCIA DA <span1>COMPUTAÇÃO |</span1>
+                         DESENVOLVIMENTO WEB<span>.</span></h1>
+                    <div class="btn-contato"><a href="#contato">
+                        <button>Entre em contato</button></a>
+                    </div>                                 
+                </div><!--txt-topo-site-->
+
+                <div class="img-topo-site">
+                    <img src="img/portifolioimg.png" alt="">
+                </div><!--img-topo-site-->
+            
+            </div>                                  
+        </div><!--interface-->
+    </section><!--topo-do-site-->
+
+    <section class="especialidades">
+        <div class="nome">Cauan Guerreiro</div>
+        <div class="interface"> 
+            <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span></h2> 
+            <!-- Texto de instrução para arrastar os slides -->
+            <div class="instrucao-arraste">
+                <p>Arraste para o lado para ver mais!</p>
+            </div>
+    
+            <!-- Swiper Container -->
+            <div class="swiper-container">
+                <!-- Wrapper for slides -->
+                <div class="swiper-wrapper">
+    
+                    <!-- Slide 1 - HTML5 -->
+                    <div class="swiper-slide especialidades-box">
+                        <img src="img/html-5.png" alt="Especialidade 1" width="100" height="100">
+                        <h3>HTML5</h3> 
+                        <p>HTML5 é a última versão do HTML, a linguagem usada para estruturar o conteúdo na web.</p>
+                    </div><!--especialidades-box-->
+    
+                    <!-- Slide 2 - CSS3 -->
+                    <div class="swiper-slide especialidades-box">
+                        <img src="img/css-3.png" alt="Especialidade 2" width="100" height="100">
+                        <h3>CSS3</h3> 
+                        <p>CSS3 é a tecnologia que controla o design e o layout das páginas web.</p>
+                    </div><!--especialidades-box-->
+    
+                    <!-- Slide 3 - JavaScript -->
+                    <div class="swiper-slide especialidades-box">
+                        <img src="img/js.png" alt="Especialidade 3" width="100" height="100">
+                        <h3>JavaScript</h3> 
+                        <p>JavaScript é uma linguagem de programação essencial para a criação de interatividade em páginas web.</p>
+                    </div><!--especialidades-box-->
+    
+                    <!-- Slide 4 - Python -->
+                    <div class="swiper-slide especialidades-box">
+                        <img src="img/python.png" alt="Especialidade 4" width="100" height="100">
+                        <h3>Python</h3> 
+                        <p>Python é uma linguagem versátil, utilizada em desenvolvimento web, automação de tarefas e inteligência artificial.</p>
+                    </div><!--especialidades-box-->
+    
+                    <!-- Slide 5 - Java -->
+                    <div class="swiper-slide especialidades-box">
+                        <img src="img/java.png" alt="Especialidade 5" width="100" height="100">
+                        <h3>Java</h3> 
+                        <p>Java é amplamente usada no desenvolvimento de aplicações corporativas e sistemas robustos.</p>
+                    </div><!--especialidades-box-->
+    
+                </div><!--swiper-wrapper-->
+            </div><!--swiper-container-->
+        </div><!--interface-->
+    </section><!--especialidades-->
+    
+
+</main>
+
+<footer class="footer">
+    <p>&copy; Portifólio Cauan Guerreiro - 2024</p>
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Script to initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+</body>
+</html>

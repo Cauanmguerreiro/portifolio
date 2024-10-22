@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #fffdfd;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    padding: 20px 4%;
+    background-color: #2d9d34; 
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header a {
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    transition: 0.2s;
+}
+
+header a:hover {
+    color: #184e1b;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+section.especialidades {
+    padding: 40px 4%;
+    text-align: center;
+}
+
+.especialidades .nome {
+    font-size: 19px; 
+    font-weight: bold; 
+    color: #2d9d34; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin: 10px 0; 
+    padding: 5px; 
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    transition: transform 0.3s, color 0.3s; 
+}
+
+.especialidades .nome:hover {
+    color: #184e1b;
+    transform: scale(1.05); 
+}
+
+h2.titulo {
+    color: #ffffff;
+    background-color: #2d9d34;
+    border-radius: 10px;
+    font-size: 28px; 
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h2.titulo span {
+    color: #ffffff;
+}
+
+footer {
+    background-color: #2d9d34; 
+    color: #ffffff; 
+    padding: 20px 4%; 
+    text-align: center; 
+}
+
+footer p {
+    font-size: 16px; 
+    margin: 5px 0; 
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 4%; 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    header nav ul {
+        padding: 0; 
+    }
+
+    header nav ul li {
+        display: block; 
+        padding: 10px 0; 
+    }
+
+    h2.titulo {
+        font-size: 24px; 
+        margin-bottom: 30px; 
+    }
+
+    section.especialidades {
+        padding: 20px 2%; 
+    }
+
+    .especialidades .nome {
+        font-size: 18px; 
+    }
+}

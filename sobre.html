@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="stylesobre.css">
+    <title>Portifólio</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+<header>
+    <div class="interface">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/LOGOCAUAN.png" alt="" width="80">
+            </a>
+        </div><!--logo-->
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+            </ul>
+        </nav>
+
+        <div class="btn-contato">
+            <a href="https://api.whatsapp.com/send/?phone=5551982553302&text&type=phone_number&app_absent=0" target="_blank">
+                <button>Contatos</button>
+            </a>
+        </div>
+    </div><!--interface-->
+</header>
+
+<main>
+    <section class="sobremim">
+        <div class="interface"> 
+            <h2 class="titulo">SOBRE <span>MIM</span><h2> 
+                <p>
+                    Atualmente cursando Ciência da Computação, utilizo uma variedade de ferramentas para aprimorar meu aprendizado e desenvolvimento profissional.
+                    No campo da programação, faço uso de Visual Studio Code, uma plataforma poderosa que me permite escrever e testar códigos em diferentes linguagens, como Python e JavaScript. Essa ferramenta é essencial para o meu aprendizado, pois oferece extensões que facilitam a depuração e a colaboração em projetos.
+                    Além disso, utilizo HTML e CSS para criar e estilizar páginas web, aplicando conceitos de design responsivo e usabilidade. Essa experiência é particularmente valiosa no desenvolvimento do meu portfólio como instalador de antenas, onde busco apresentar meus serviços de forma clara e atraente.
+                    Estou sempre em busca de aprender novas tecnologias e metodologias, explorando ferramentas de gerenciamento de projetos e colaboração, como GitHub, para versionamento de código e trabalho em equipe. Essa combinação de conhecimentos e habilidades me permite aplicar de maneira prática o que aprendo em sala de aula, enquanto me preparo para uma carreira no campo da tecnologia.
+                    
+                    </p>  
+        </div><!--interface-->
+    </section><!--SOBREMIM-->
+    
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Cauan Guerreiro</p>
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Script to initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000, // Tempo em milissegundos antes de mudar para o próximo slide
+            disableOnInteraction: false, // Não desabilitar o autoplay após interação do usuário
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+
+</body>
+</html>
