@@ -10,9 +10,10 @@ body {
 }
 
 header {
-    padding: 15px 4%;
-    background-color: #2d9d34;
+    padding: 5px 4%;
+    background: linear-gradient(135deg, #184e1b, #2d9d34); 
 }
+
 
 header > .interface {
     display: flex;
@@ -69,47 +70,104 @@ header nav ul li {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     max-width: 700px;
 }
-
-main {
-    margin-top: 40px;
+.certificados {
+    display: flex;
+    flex-direction: column; /* Alinha o título acima das imagens */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 20px;
 }
 
-.btn-contato button {
-    color: #ffffff;
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 800;
-    background-color: #2d9d34; 
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 0 0 8px rgba(32, 82, 51, 0.5);
-    transition: background-color 0.5s, box-shadow 0.5s, transform 0.3s;
+.titulo_certificados {
+    color: white; /* Cor do texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 20px; /* Espaço entre o título e as imagens */
 }
 
-.btn-contato button:hover {
-    background-color: #184e1b;
-    box-shadow: 0 0 15px rgba(52, 244, 4, 0.25);
-    transform: scale(1.05);
+.certificados_imagens {
+    display: flex; /* Habilita o flexbox para as imagens */
+    flex-wrap: wrap; /* Permite que as imagens sejam envolvidas em uma nova linha se não houver espaço suficiente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }
 
-.footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #2d9d34;
-    color: #fff;
+.certificado {
+    position: relative;
+    margin: 10px; /* Espaçamento entre as imagens */
+    width: 200px; /* Defina uma largura fixa ou ajuste conforme necessário */
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 20px 4%;
+.certificado img {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção das imagens */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+}
+
+.certificado:hover img {
+    transform: scale(1.1); /* Aumenta a imagem em 10% quando o cursor passa por cima */
+}
+
+.texto_certificado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Cor do texto */
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    padding: 10px;
+}
+
+
+
+    main {
+        margin-top: 40px;
     }
-
-    header nav ul li {
-        padding: 10px 20px;
+    
+    .footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #2d9d34; /* Cor de fundo do footer */
+        color: #fff; /* Cor do texto */
+        position: relative; /* Para evitar sobreposição com outros elementos */
     }
-
-    .sobremim .titulo {
-        font-size: 32px;
+    
+    .btn-contato {
+        display: flex; /* Utiliza flexbox para alinhar o botão */
+        justify-content: center; /* Centraliza o botão horizontalmente */
+        margin: 20px 0; /* Margem em cima e embaixo */
     }
-}
+    
+    .btn-contato button {
+        color: #ffffff;
+        padding: 10px 40px;
+        font-size: 18px;
+        font-weight: 800;
+        background-color: #2d9d34; 
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(32, 82, 51, 0.5);
+        transition: background-color 0.5s, box-shadow 0.5s, transform 0.3s;
+    }
+    
+    .btn-contato button:hover {
+        background-color: #184e1b;
+        box-shadow: 0 0 15px rgba(52, 244, 4, 0.25);
+        transform: scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+        header {
+            padding: 20px 4%;
+        }
+    
+        header nav ul li {
+            padding: 10px 20px;
+        }
+    
+        .sobremim .titulo {
+            font-size: 32px;
+        }
+    }

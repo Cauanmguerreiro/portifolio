@@ -46,11 +46,39 @@
                     </p>  
         </div><!--interface-->
     </section><!--SOBREMIM-->
+    <section>
+        <section>
+            <div class="certificados">
+                <h3 class="titulo_certificados">CERTIFICADOS</h3>
+                <div class="certificados_imagens">
+                    <div class="certificado" onclick="openModal('img/htmlcssjs.png')">
+                        <img src="img/htmlcssjs.png" alt="" class="htmlcssjs">
+                        <div class="texto_certificado">HTML, CSS & JS</div>
+                    </div>
+                    <div class="certificado" onclick="openModal('img/py.png')">
+                        <img src="img/py.png" alt="" class="py">
+                        <div class="texto_certificado">Python</div>
+                    </div>
+                    <div class="certificado" onclick="openModal('img/javacerti.png')">
+                        <img src="img/javacerti.png" alt="" class="jfo">
+                        <div class="texto_certificado">Java</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal -->
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-img" alt="">
+        </div>
+        
+        
     
 </main>
 
 <footer class="footer">
-    <p>&copy; 2024 Cauan Guerreiro</p>
+    <p>&copy; Portifólio Cauan Guerreiro - 2024</p>
 </footer>
 
 <!-- Swiper JS -->
@@ -71,6 +99,18 @@
             clickable: true,
         },
     });
+    function openModal(imageSrc) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    modal.style.display = "flex"; // Exibe o modal
+    modalImg.src = imageSrc; // Define a fonte da imagem no modal
+}
+
+    function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none"; // Esconde o modal
+}
+
 </script>
 
 </body>
