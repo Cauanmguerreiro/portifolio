@@ -5,22 +5,23 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
-    background-color: #fffdfd;
+    display: flex; /* Usar flexbox no body */
+    flex-direction: column; /* Organizar os elementos em coluna */
+    background-color: #0000000d;
+    overflow-x: hidden; /* Para evitar rolagem horizontal */
 }
 
 .interface {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.flex {
-    display: flex;
+    flex: 1; /* Permite que a interface ocupe o espaço disponível */
 }
 
 header {
-    padding: 20px 4%;
+    padding: 15px 4%; /* Diminuiu o padding */
     background-color: #2d9d34; 
 }
 
@@ -50,21 +51,58 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 20px; /* Diminuiu o padding */
+}
+.btn-container {
+    display: grid; 
+    gap: 10px; 
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajuste a largura mínima */
+    grid-template-rows: repeat(2, 100px);  
 }
 
+.btn-linkedin button, .btn-github button {
+    display: flex; 
+    align-items: center; 
+    padding: 5px 20px; 
+    font-size: 16px; 
+    font-weight: 800;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(32, 82, 51, 0.5);
+    transition: 0.5s;
+    min-width: 120px; 
+}
+
+.btn-linkedin button {
+    color: white;
+    background-color: #0e76a8; /* Cor do LinkedIn */
+}
+
+.btn-github button {
+    background-color: #ffffff; /* Cor do GitHub */
+    color: #000000;
+}
+
+.btn-linkedin button img.icon, .btn-github button img.icon {
+    width: 50px;
+    height: auto;
+    margin-right: 8px;
+}
+
+
 section.especialidades {
-    padding: 40px 4%;
+    padding: 30px 4%; /* Diminuiu o padding */
     text-align: center;
 }
 
 .especialidades .nome {
-    font-size: 19px; 
+    font-size: 18px; /* Diminuiu o tamanho da fonte */
     font-weight: bold; 
     color: #2d9d34; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    margin: 10px 0; 
-    padding: 5px; 
+    margin: 5px 0; /* Diminuiu a margem */
+    padding: 3px; /* Diminuiu o padding */
     border-radius: 5px; 
     background-color: rgba(255, 255, 255, 0.8); 
     transition: transform 0.3s, color 0.3s; 
@@ -79,27 +117,95 @@ h2.titulo {
     color: #ffffff;
     background-color: #2d9d34;
     border-radius: 10px;
-    font-size: 28px; 
+    font-size: 24px; /* Diminuiu o tamanho da fonte */
     text-align: center;
-    margin-bottom: 60px;
-}
-
-h2.titulo span {
-    color: #ffffff;
+    margin-bottom: 40px; /* Diminuiu a margem */
 }
 
 footer {
     background-color: #2d9d34; 
     color: #ffffff; 
-    padding: 20px 4%; 
+    padding: 15px 4%; /* Diminuiu o padding */
     text-align: center; 
 }
 
 footer p {
-    font-size: 16px; 
+    font-size: 14px; /* Diminuiu o tamanho da fonte */
     margin: 5px 0; 
 }
 
+/* Estilização da seção de projetos */
+.projetos {
+    padding: 20px 4%; /* Diminuiu o padding */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.projetos:hover {
+    transform: translateY(-20px); /* Ajuste para um efeito mais sutil */
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px; /* Diminuiu o gap */
+}
+
+.galeria a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Reduz a opacidade de todas as imagens menos a que está sendo "hovered" */
+.galeria:hover a {
+    opacity: 0.2;
+}
+
+.galeria a:hover {
+    opacity: 1; /* Mantém a opacidade da imagem que está sendo "hovered" */
+    transform: scale(1.1); /* Diminuiu a escala */
+}
+
+/* Sombra personalizada para cada imagem */
+.galeria img {
+    width: 180px; /* Diminuiu a largura */
+    max-width: 250px; /* Diminuiu a largura máxima */
+    border-radius: 50px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.galeria img:hover {
+    opacity: 0.9;
+}
+
+/* Sombra para cada imagem específica */
+.galeria .img1:hover {
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.93); /* Sombra vermelha */
+}
+
+.galeria .img2:hover {
+    box-shadow: 0 4px 20px rgba(1, 125, 167, 0.873); /* Sombra azul */
+}
+
+.galeria .img3:hover {
+    box-shadow: 0 4px 20px rgba(1, 75, 30, 0.5); /* Sombra verde */
+}
+
+.projetos h3.titulo {
+    color: #2d9d34;
+    cursor: pointer;
+    margin-bottom: 60px; /* Diminuiu a margem */
+    transition: color 0.3s ease, transform 0.3s ease; /* Suaviza a transição de cor e transformação */
+}
+
+/* Efeito ao passar o mouse */
+.projetos h3.titulo:hover {
+    color: #0a3d0c; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o tamanho do texto */
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     header {
         padding: 20px 4%; 
@@ -113,12 +219,12 @@ footer p {
 
     header nav ul li {
         display: block; 
-        padding: 10px 0; 
+        padding: 5px 0; /* Diminuiu o padding */
     }
 
     h2.titulo {
-        font-size: 24px; 
-        margin-bottom: 30px; 
+        font-size: 22px; /* Diminuiu o tamanho da fonte */
+        margin-bottom: 20px; /* Diminuiu a margem */
     }
 
     section.especialidades {
@@ -126,6 +232,15 @@ footer p {
     }
 
     .especialidades .nome {
-        font-size: 18px; 
+        font-size: 16px; /* Diminuiu o tamanho da fonte */
+    }
+
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img {
+        max-width: 90%;
     }
 }
