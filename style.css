@@ -24,7 +24,7 @@ body {
 }
 .img-topo-site img:hover{
     transform: scale(1.05); 
-    box-shadow: 16px 30px 16px #184e1b; /* Sombra mais intensa */
+    drop-shadow: 16px 30px 16px #184e1b; /* Sombra mais intensa */
 }
 .flex {
     display: flex;
